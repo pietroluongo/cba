@@ -1,5 +1,65 @@
+import useMovieDetails from "../../hooks/useMovieDetails";
+
 const Homepage = () => {
-  return <>Homepage</>;
+  const movieDetails = useMovieDetails(11544);
+
+  return (
+    <div className="flex flex-col">
+      <div
+        className="w-screen h-screen bg-fixed flex flex-col items-center justify-center bg-no-repeat bg-cover bg-blend-darken"
+        style={{
+          backgroundImage: `url(https://image.tmdb.org/t/p/original/${movieDetails.data?.backdrop_path})`,
+          backgroundColor: "rgb(0,0,0,0.7)",
+        }}
+      >
+        <div className="font-sans font-extrabold text-7xl w-fit p-10 drop-shadow-2xl h-full flex items-center">
+          {movieDetails.data?.title}
+        </div>
+        <div className="font-serif text-2xl w-[80%] text-white mt-10 p-10 text-center drop-shadow-2xl h-full">
+          <span>
+            {movieDetails.data?.overview.split(".").slice(0, 3).join(".")}.
+          </span>
+        </div>
+        <div className="font-serif text-2xl text-white drop-shadow-2xl mt-10 p-10 flex flex-col justify-center text-center">
+          <p>Próxima sessão</p>
+          <p>15/04/2024</p>
+          <p>22h</p>
+        </div>
+      </div>
+      <div className="m-10">
+        <div className="grid grid-cols-7 gap-3">
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+          <div className="border border-red-600 h-96">asdfg</div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Homepage;
